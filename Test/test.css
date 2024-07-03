@@ -1,0 +1,102 @@
+/* Base Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .brand-logo {
+    height: 40px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 1rem;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .right-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-box {
+    padding: 0.5rem;
+    margin-right: 1rem;
+  }
+  
+  .sub-btn, .login-link {
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Collapsible Icon Styles */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-toggle .hamburger,
+  .nav-toggle .hamburger::before,
+  .nav-toggle .hamburger::after {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    content: '';
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-toggle .hamburger::before {
+    transform: translateY(-8px);
+  }
+  
+  .nav-toggle .hamburger::after {
+    transform: translateY(8px);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-links, .right-container {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav-links li {
+      text-align: center;
+      margin: 1rem 0;
+    }
+  
+    .nav-toggle {
+      display: flex;
+    }
+  
+    .nav-links.active, .right-container.active {
+      display: flex;
+    }
+  }
+  
